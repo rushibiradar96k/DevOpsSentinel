@@ -1,0 +1,19 @@
+
+# Compiled Java files
+bin/
+*.class
+
+# Eclipse workspace-specific settings
+.settings/
+
+# Build output
+target/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store	
+Thumbs.db
