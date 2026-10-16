@@ -25,15 +25,17 @@ public class LogAnalyzer {
             // Read log file line by line
             while ((line = reader.readLine()) != null) {
 
-                String[] parts = line.split(" ", 2);
+                String[] parts = line.split(" ", 4);
 
                 Log log = new Log();
-
-                log.level = parts[0];
-                log.message = parts[1];
+                
+                log.timestamp = parts[0] + " " + parts[1];
+                log.level = parts[2];
+                log.message = parts[3];
 
                 logs.add(log);
-
+                
+                System.out.println("Timestamp : " + log.timestamp);
                 System.out.println("Level : " + log.level);
                 System.out.println("Message : " + log.message);
                 System.out.println("---------------------");
